@@ -8,16 +8,15 @@ var isPalindrome = function (x) {
     return true;
   }
   x = x.toString();
-
-  for (let i = x.length - 1; i > 0; i--) {
+  for (let i = x.length - 1; i > x.length / 2; i--) {
     if (x[counter] === x[i]) {
       res = true;
     } else {
       return false;
     }
-    counter = counter + 1;
+    counter++;
   }
   return res;
 };
 
-console.log(isPalindrome(101));
+console.log(isPalindrome(11221));
